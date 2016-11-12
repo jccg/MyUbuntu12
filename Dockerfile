@@ -1,5 +1,4 @@
-#FROM ubuntu:trusty-20161006
-FROM ubuntu:12.04
+FROM ubuntu:trusty-20161006
 
 RUN mkdir /var/run/sshd
 
@@ -9,7 +8,7 @@ RUN sed -ri 's/^PermitRootLogin\s+.*/PermitRootLogin yes/' /etc/ssh/sshd_config
 RUN sed -ri 's/UsePAM yes/#UsePAM yes/g' /etc/ssh/sshd_config
 
 #更换阿里云源
-ADD docker/sources.list ./
+ADD sources.list ./
 RUN mv sources.list /etc/apt/sources.list
 
 RUN apt-get clean
