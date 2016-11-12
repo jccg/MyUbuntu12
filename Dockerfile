@@ -1,5 +1,7 @@
 FROM ubuntu:trusty-20161006
 
+RUN apt-get update
+RUN apt-get install -y openssh-server
 RUN mkdir /var/run/sshd
 
 RUN echo 'root:password' |chpasswd
@@ -14,6 +16,6 @@ RUN mv sources.list /etc/apt/sources.list
 RUN apt-get clean
 RUN apt-get update
 
-RUN apt-get install -y openssh-server htop vim screen
+RUN apt-get install -y htop vim screen
 
 
