@@ -1,8 +1,7 @@
 FROM ubuntu:trusty-20161006
 
-
 #更换阿里云源
-ADD docker/sources.list ./
+ADD sources.list ./
 RUN mv sources.list /etc/apt/sources.list
 
 RUN apt-get clean
