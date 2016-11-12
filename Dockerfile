@@ -14,7 +14,6 @@ RUN mv sources.list /etc/apt/sources.list
 RUN apt-get clean
 RUN apt-get update
 
-RUN apt-get install -y openssh-server
-RUN apt-get install -y htop
-RUN apt-get install -y vim
+RUN apt-get install -y openssh-server htop vim screen
+
 
