@@ -20,3 +20,5 @@ RUN apt-get install -y htop vim screen
 EXPOSE 22
 
 WORKDIR /root
+
+ENTRYPOINT /usr/sbin/sshd -D
