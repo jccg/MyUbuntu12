@@ -17,4 +17,6 @@ RUN sed -ri 's/UsePAM yes/#UsePAM yes/g' /etc/ssh/sshd_config
 
 RUN apt-get install -y htop vim screen
 
+EXPOSE 22
 
+WORKDIR /root
