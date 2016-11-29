@@ -17,6 +17,8 @@ RUN sed -ri 's/UsePAM yes/#UsePAM yes/g' /etc/ssh/sshd_config
 
 RUN apt-get install -y htop vim screen
 
+RUN wget https://bootstrap.pypa.io/get-pip.py && python get-pip.py
+
 EXPOSE 22
 
 WORKDIR /root
