@@ -15,7 +15,7 @@ RUN echo 'root:password' |chpasswd
 RUN sed -ri 's/^PermitRootLogin\s+.*/PermitRootLogin yes/' /etc/ssh/sshd_config
 RUN sed -ri 's/UsePAM yes/#UsePAM yes/g' /etc/ssh/sshd_config
 
-RUN apt-get install -y htop vim screen
+RUN apt-get install -y htop vim screen git
 
 RUN wget https://bootstrap.pypa.io/get-pip.py && python get-pip.py
 RUN pip install cymysql selenium xlrd
